@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx.dockerfile
+    container_name: nginx_percobaan
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./src:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./dhparam:/etc/nginx/certs/dhparam
+      - ./certs/danagoodies.com.pem:/etc/nginx/certs/danagoodies.com.pem      
+      - ./certs/danagoodies.com.key:/etc/nginx/certs/csr_and_key/danagoodies.com.key
+      - ./certs/danagoodies.com.crt:/etc/nginx/certs/csr_and_key/danagoodies.com.crt
+#      - ./certbot/conf:/etc/nginx/ssl/
+#      - ./certbot/data:/usr/share/nginx/html/letsencrypt
+
+#  certbot:
+#    image: certbot/certbot:latest
+#    command: certonly --webroot --webroot-path=/usr/share/nginx/html/letsencrypt --email danaditiaa16@gmail.com --agree-tos --no-eff-email -d danagoodies.com
+#   volumes:
+#      - ./certbot/conf:/etc/letsencrypt
+#      - ./certbot/logs:/var/log/letsencrypt
+#      - ./certbot/data:/usr/share/nginx/html/letsencrypt
