@@ -44,7 +44,10 @@ docker-compose up -d --build
 
 dont forget to use https://danagoodies.com for accessing SSL one, because I don't want to set it auto redirect to SSL for now. 
 
+9. Not secure? import the CA ROOT to your browser
 
+Depends on your browser (which mine is firefox), go to Preferences > Privacy & Security > Certificates > View Certificates > Authorities > Import. Import CAROOT file on <your-dir-path>/certs/danagoodies.com.caroot.crt. It should be secure for now. For other browser, please do googling on your own :v
+ 
 Thanks to:
 
 Andrew Schmelyun (https://github.com/aschmelyun/video-https-docker-nginx) and his video tutorial (https://www.youtube.com/watch?v=UloZyNiHZK4)
