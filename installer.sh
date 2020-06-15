@@ -1,8 +1,8 @@
 #!/bin/bash
-#Shellscript buat deploy nginx + rapidssl
+#Shellscript buat deploy nginx + thawte
 #Buatan Ramadhan Hidayat
-#git clone <github proyek ini>
-cd <folder proyek>
+#git clone https://github.com/R13TechNewbie/DockerThawteTrialSSL
+cd DockerThawteTrialSSL
 echo "Kita buat Certificate Signing Request (csr) dulu"
 echo "Masukkan data csrnya"
 read -p "Negara lu (Contohnya kalo Jepun masukin singkatannya aja, jadi JP, kalo Indo ya ID): " Country
@@ -16,8 +16,8 @@ echo "RUN openssl req -new -key /etc/nginx/certs/csr_and_key/website.key -out /e
 echo "Mulai generate csr.."
 #sudo docker
 sudo docker-compose up -d --build
-docker cp <container-id>:/etc/nginx/certs/csr_and_key/website.key ./certs/$CName.key
-docker cp <container-id>:/etc/nginx/certs/csr_and_key/website.csr ./certs/$CName.csr
+docker cp nginx_percobaan:/etc/nginx/certs/csr_and_key/website.key ./certs/$CName.key
+docker cp nginx_percobaan:/etc/nginx/certs/csr_and_key/website.csr ./certs/$CName.csr
 echo -e "Copy csr ini ke website RapidSSL:\n"
 cat ./certs/$CName.csr
 echo -e "\nKalo gatau caranya, buka ae link ini \"https://www.rapidsslonline.com/ssl-brands/rapidssl/free-ssl-certificates.aspx\""
