@@ -8,6 +8,7 @@ Important : SSL expired on August 13th, 2020, just try to make a new one by open
 Prequisities:
 
 - Docker (https://www.docker.com/products/docker-desktop)
+- Docker-Compose (type "sudo apt install docker-compose" for installing)
 
 How to use:
 
@@ -17,7 +18,7 @@ git clone https://github.com/R13TechNewbie/DockerThawteTrialSSL
 
 2. Open folder directory
 
-cd DockerThawteTrialSSL-master
+cd DockerThawteTrialSSL
 
 3.(Optional) Install nano
 
