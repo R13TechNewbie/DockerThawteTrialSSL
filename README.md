@@ -1,5 +1,6 @@
 # DockerThawteTrialSSL
 Create SSL Website on Docker (NGINX) with Thawte Trial SSL Certificate
+*Dibuat oleh Ramadhan Hidayat Mahasiswa Sistem Informasi UINJKT Kelas 6C materi IT Security Pak Aries SHT* #tar ini diapus abis pamer ke pak Aries :p
 
 Important : SSL expired on August 13th, 2020, just try to make a new one by open nginx.dockerfile and uncomment the openssl hashtag
 
