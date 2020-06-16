@@ -11,7 +11,7 @@ services:
       - "443:443"
     volumes:
       - ./src:/var/www/html
-      - ./nginx/default.conf:/etc/nginx/conf.d/
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./dhparam:/etc/nginx/certs/dhparam
       - ./certs/ckel7.com.pem:/etc/nginx/certs/ckel7.com.pem      
       - ./certs/ckel7.com.key:/etc/nginx/certs/csr_and_key/ckel7.com.key
