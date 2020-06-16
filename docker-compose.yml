@@ -13,9 +13,9 @@ services:
       - ./src:/var/www/html
       - ./nginx/default.conf:/etc/nginx/conf.d/
       - ./dhparam:/etc/nginx/certs/dhparam
-      - ./certs/danagoodies.com.pem:/etc/nginx/certs/danagoodies.com.pem      
-      - ./certs/danagoodies.com.key:/etc/nginx/certs/csr_and_key/danagoodies.com.key
-      - ./certs/danagoodies.com.crt:/etc/nginx/certs/csr_and_key/danagoodies.com.crt
+      - ./certs/danagoodies.com.pem:/etc/nginx/certs/ckel7.com.pem      
+      - ./certs/danagoodies.com.key:/etc/nginx/certs/csr_and_key/ckel7.com.key
+      - ./certs/danagoodies.com.crt:/etc/nginx/certs/csr_and_key/ckel7.com.crt
 #      - ./certbot/conf:/etc/nginx/ssl/
 #      - ./certbot/data:/usr/share/nginx/html/letsencrypt
 
